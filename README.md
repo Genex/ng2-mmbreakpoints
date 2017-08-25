@@ -1,7 +1,9 @@
+[![NPM Version](https://img.shields.io/npm/v/ng2-mmbreakpoints.svg)](https://www.npmjs.com/package/ng2-mmbreakpoints)
+
 # ng2-mmbreakpoints
 
 
-`ng2-mmbreakpoints` is a service using matchMedia method to listen to breakpoints.
+`ng2-mmbreakpoints` is a service using the window.matchMedia method to listen to breakpoints.
 
 It's largely inspired by the [angular-breakpoints](https://github.com/fknop/angular-breakpoints) package, but differs in that it uses the matchMedia method to track breakpoints.
 
@@ -17,7 +19,7 @@ npm install ng2-mmbreakpoints --save
 
 ## How to use
 
-First you need to import the `breakpointsProvider` function and expose it in the providers array (or in bootstrap).
+First you need to import the `provideMatchmediaService` function and expose it in the providers array (or in bootstrap).
 
 ```
 import { MatchmediaService, provideMatchmediaService } from 'ng2-mmbreakpoints';
