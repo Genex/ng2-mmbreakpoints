@@ -34,7 +34,11 @@ export class MatchmediaService  {
 
 	private addMQHandler(handler) {
 		Object.keys(this.matchmediaCollection).forEach(prop => {
-			this.matchmediaCollection[prop].addListener(handler);
+			function _handler(){
+				arguments[0].mediaCustom = prop;
+				handler.apply(this, arguments);
+			}
+			this.matchmediaCollection[prop].addListener(_handler);
 		});
 	}
 	
