@@ -11,6 +11,15 @@ export interface BreakpointConfig {
 	[propName: string]: any;
 }
 
+//hack for AOT compiler :(
+export abstract class BreakpointConfigClass implements BreakpointConfig {
+	xs?: string;
+	sm?: string;
+	md?: string;
+	lg?: string;
+	[propName: string]: any;
+}
+
 const defaultBreakpoints: BreakpointConfig = {
 	xs: '(max-width: 767px)',
 	sm: '(min-width: 768px) and (max-width: 991px)',
@@ -48,7 +57,7 @@ export class MatchmediaService  {
 		});
 	}
 
-	constructor (breakpoints: BreakpointConfig) {
+	constructor (breakpoints: BreakpointConfigClass) {
 		this.setMatchmediaCollection(breakpoints);
 		this.breakpoints = breakpoints;
 		this.matchmediaChanges = Observable.fromEventPattern(
