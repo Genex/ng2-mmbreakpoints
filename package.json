@@ -27,9 +27,9 @@
   "license": "MIT",
   "homepage": "https://github.com/Genex/ng2-mmbreakpoints#readme",
   "devDependencies": {
-    "@angular/core": "^5.0.0",
-    "ng-packagr": "^1.6.0",
-    "rxjs": "^5.5.2",
+    "@angular/core": "^5.2.10",
+    "ng-packagr": "^1.7.0",
+    "rxjs": "^5.5.10",
     "typescript": "~2.4.2"
   },
   "$schema": "./node_modules/ng-packagr/package.schema.json",
@@ -37,5 +37,6 @@
     "lib": {
       "entryFile": "index.ts"
     }
-  }
+  },
+  "dependencies": {}
 }
