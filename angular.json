@@ -121,6 +121,41 @@
           }
         }
       }
+    },
+    "ng2-mmbreakpoints": {
+      "root": "projects/ng2-mmbreakpoints",
+      "sourceRoot": "projects/ng2-mmbreakpoints/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng2-mmbreakpoints/tsconfig.lib.json",
+            "project": "projects/ng2-mmbreakpoints/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng2-mmbreakpoints/src/test.ts",
+            "tsConfig": "projects/ng2-mmbreakpoints/tsconfig.spec.json",
+            "karmaConfig": "projects/ng2-mmbreakpoints/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng2-mmbreakpoints/tsconfig.lib.json",
+              "projects/ng2-mmbreakpoints/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ng2-mmbreakpoints-library"

@@ -16,6 +16,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng2-mmbreakpoints": [
+        "dist/ng2-mmbreakpoints"
+      ],
+      "ng2-mmbreakpoints/*": [
+        "dist/ng2-mmbreakpoints/*"
+      ]
+    }
   }
 }
