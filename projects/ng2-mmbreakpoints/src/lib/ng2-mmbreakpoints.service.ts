@@ -57,6 +57,9 @@ export class Ng2MmbreakpointsService {
   }
 
   constructor(breakpoints: BreakpointConfigClass) {
+    if(typeof window === 'undefined' || !window.matchMedia) {
+      throw new Error('ng2-mmbreakpoints can only be used in a environment with access to the matchMedia window method');
+    } 
     this.setMatchmediaCollection(breakpoints);
     this.breakpoints = breakpoints;
     this.matchmediaChanges = fromEventPattern(
