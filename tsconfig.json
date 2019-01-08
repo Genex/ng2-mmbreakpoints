@@ -1,21 +1,29 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "",
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
     "declaration": false,
+    "module": "es2015",
+    "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "lib": ["es6", "dom"],
-    "mapRoot": "./",
-    "module": "es6",
-    "moduleResolution": "node",
-    "outDir": "dist/out-tsc",
-    "sourceMap": true,
     "target": "es5",
     "typeRoots": [
       "node_modules/@types"
-    ]
-  },
-  "exclude": [
-    "node_modules"
-  ]
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "paths": {
+      "ng2-mmbreakpoints": [
+        "dist/ng2-mmbreakpoints"
+      ],
+      "ng2-mmbreakpoints/*": [
+        "dist/ng2-mmbreakpoints/*"
+      ]
+    }
+  }
 }
