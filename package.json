@@ -5,6 +5,8 @@
   "main": "index.ts",
   "scripts": {
     "packagr": "ng-packagr -p package.json",
+    "npm_pack": "cd dist && npm pack",
+    "package": "npm run packagr && npm run npm_pack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
