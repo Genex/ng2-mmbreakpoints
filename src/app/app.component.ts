@@ -1,19 +1,19 @@
 import { Component, OnInit, NgZone } from '@angular/core';
-import { Ng2MmbreakpointsService } from 'ng2-mmbreakpoints';
+import { MatchmediaService } from 'ng2-mmbreakpoints';
 import { mmCreate } from './mm-create';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [{ provide: Ng2MmbreakpointsService, useFactory: mmCreate}]
+  providers: [{ provide: MatchmediaService, useFactory: mmCreate}]
 })
 export class AppComponent {
   title = 'ng2-mmbreakpoints-library';
   displayBreakpoint: string;
   displayColor: string;
 
-  constructor(private nn2: Ng2MmbreakpointsService, private ngZone: NgZone) {}
+  constructor(private nn2: MatchmediaService, private ngZone: NgZone) {}
 
   ngOnInit() {
     this.updateMMData();

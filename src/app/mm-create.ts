@@ -1,4 +1,4 @@
-import { Ng2MmbreakpointsService, BreakpointConfig } from 'ng2-mmbreakpoints';
+import { MatchmediaService, BreakpointConfig } from 'ng2-mmbreakpoints';
 
 export function mmCreate() {
     const breakpoints: BreakpointConfig = {
@@ -7,5 +7,5 @@ export function mmCreate() {
         md: '(min-width: 992px) and (max-width: 1199px)',
         lg: '(min-width: 1200px)'
     };
-    return new Ng2MmbreakpointsService(breakpoints);
+    return new MatchmediaService(breakpoints);
 }

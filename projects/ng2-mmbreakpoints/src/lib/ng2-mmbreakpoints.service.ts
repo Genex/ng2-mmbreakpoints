@@ -28,7 +28,7 @@ const defaultBreakpoints: BreakpointConfig = {
 @Injectable({
   providedIn: 'root'
 })
-export class Ng2MmbreakpointsService {
+export class MatchmediaService {
   private subscription: Subscription;
   public matchmediaCollection: any = {};
   public breakpoints: BreakpointConfig;
@@ -93,14 +93,14 @@ export class Ng2MmbreakpointsService {
 
 // factory for creating new instances of the service
 export const createMatchmediaService = function(breakpoints = defaultBreakpoints) {
-  return new Ng2MmbreakpointsService(breakpoints);
+  return new MatchmediaService(breakpoints);
 };
 
 // service provider to provide configuration for service when provided through DI
 export const provideMatchmediaService = function(breakpoints?) {
   return [
     {
-      provide: Ng2MmbreakpointsService,
+      provide: MatchmediaService,
       useFactory() {
         return createMatchmediaService(breakpoints);
       },
