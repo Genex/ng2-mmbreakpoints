@@ -7,9 +7,9 @@
 
 It's largely inspired by the [angular-breakpoints](https://github.com/fknop/angular-breakpoints) package, but differs in that it uses the matchMedia method to track breakpoints.
 
-The matchMedia listeners are then wrapped in  an `RxJS` Observable for Angular2 usage.
+The matchMedia listeners are then wrapped in  an `RxJS` Observable for Angular2+ usage.
 
-## Install
+## Installation 
 
 ### npm
 
@@ -88,3 +88,7 @@ If you want to temporarily unsubscribe, call the `unsubscribe` method.
 If you want to resubscribe, call the `subscribe` method.
 
 The Observable will also add/remove listeners as needed.
+
+## Wrapper Project
+
+This service was updated for compatiblity with v6 of the Angular CLI and as such the primary ng2-mmbreakpoints library repo within github now contains an "wrapper" project which the library is contained within.  The wrapper is contained within the 'src/app' directory and the library is within the 'projects/ng2-mmbreakpoints' directory.  A sample useage as well as a few basic e2e tests are available from the wrapper app.
