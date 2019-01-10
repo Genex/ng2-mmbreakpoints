@@ -3,6 +3,7 @@
 # compiled output
 /dist
 /tmp
+/out-tsc
 
 # dependencies
 /node_modules
@@ -12,10 +13,9 @@
 .project
 .classpath
 .c9/
-*.iml
 *.launch
 .settings/
-*.sublime-*
+*.sublime-workspace
 
 # IDE - VSCode
 .vscode/*
@@ -27,13 +27,13 @@
 # misc
 /.sass-cache
 /connect.lock
-/coverage/*
+/coverage
 /libpeerconnection.log
 npm-debug.log
+yarn-error.log
 testem.log
 /typings
-.npmrc
 
-#System Files
+# System Files
 .DS_Store
 Thumbs.db
